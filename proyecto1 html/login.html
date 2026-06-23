@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite tildes y ñ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para que se vea bien en celulares -->
+    <title>Log In</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Conecta el CSS -->
+</head>
+
+<body>
+    <!-- Barra de navegación, "Log In" es la página activa -->
+    <nav id="barritadearriba">
+        <ul id="listanav">
+            <li class="nav_list_item"><a href="index.html">Inicio</a></li>
+            <li class="nav_list_item"><a href="compuertas.html">Compuertas logicas</a></li>
+            <li class="nav_list_item" id="botoncito_de_arriba_login"><a class="pagina_activa" href="login.html">Log In</a></li>
+            <li class="nav_list_item"><a href="rolso.html">Rol del SO</a></li>
+            <li class="nav_list_item"><a href="funcionesdelso.html">Funciones del SO</a></li>
+            <li class="nav_list_item"><a href="sistemasoperativos.html">Sistemas Operativos</a></li>
+            <li class="nav_list_item"><a href="computational.html">Pensamiento Computacional</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Log In</h1>
+
+        <div class="contenedor"> <!-- Caja que contiene el formulario -->
+            <form action="index.html" method="post"> <!-- Al enviar, manda los datos a index.html -->
+
+                <label for="username">Username:</label> <!-- Etiqueta del campo usuario -->
+                <input type="text" id="username" name="username" required><br><br> <!-- Campo de texto, obligatorio -->
+
+                <label for="password">Password:</label> <!-- Etiqueta del campo contraseña -->
+                <input type="password" id="password" name="password" required><br><br> <!-- Campo de contraseña (oculta los caracteres), obligatorio -->
+
+                <input id="login_submit" type="submit" value="Log In"> <!-- Botón para enviar el formulario -->
+
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Delfina Brugna 5toB</p>
+        <a href="index.html">Volver al inicio</a>
+    </footer>
+</body>
+
+</html>

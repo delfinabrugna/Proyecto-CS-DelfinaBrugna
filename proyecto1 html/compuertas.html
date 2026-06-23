@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite tildes y ñ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para que se vea bien en celulares -->
+    <title>Proyecto 1</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Conecta el CSS -->
+</head>
+
+<body>
+    <!-- Barra de navegación, igual a la otra página pero acá "Compuertas logicas" es la página activa -->
+    <nav id="barritadearriba">
+        <ul id="listanav">
+            <li class="nav_list_item"><a href="index.html">Inicio</a></li>
+            <li class="nav_list_item"><a class="pagina_activa" href="compuertas.html">Compuertas logicas</a></li>
+            <li class="nav_list_item" id="botoncito_de_arriba_login"><a href="login.html">Log In</a></li>
+            <li class="nav_list_item"><a href="rolso.html">Rol del SO</a></li>
+            <li class="nav_list_item"><a href="funcionesdelso.html">Funciones del SO</a></li>
+            <li class="nav_list_item"><a href="sistemasoperativos.html">Sistemas Operativos</a></li>
+            <li class="nav_list_item"><a href="computational.html">Pensamiento Computacional</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Compuertas Lógicas</h1>
+    </header>
+
+    <main>
+        <div id="contenedor"> <!-- Contenedor general de todas las compuertas -->
+
+            <!-- COMPUERTA AND -->
+            <div class="contcompuerta">
+                <h2 class="compuerta">AND</h2>
+                <img src="https://hetpro-store.com/TUTORIALES/wp-content/uploads/2017/10/compuerta-and-1.png"
+                    alt="compuerta AND" class="compuerta">
+                <p>Da 1 cuando ambas son 1</p>
+                <div>
+                    <table> <!-- Tabla de verdad -->
+                        <tr>
+                            <th>P</th>
+                            <th>Q</th>
+                            <th>AND</th>
+                        </tr>
+                        <tr><td>V</td><td>V</td><td>V</td></tr>
+                        <tr><td>V</td><td>F</td><td>F</td></tr>
+                        <tr><td>F</td><td>V</td><td>F</td></tr>
+                        <tr><td>F</td><td>F</td><td>F</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- COMPUERTA OR -->
+            <div class="contcompuerta">
+                <h2 class="compuerta">OR</h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHB9OsQvAj6kjcSjVb0KvNM3Sq16RdnlnXFQ&s"
+                    alt="compuerta OR" class="compuerta">
+                <p>Da 1 cuando al menos 1 es 1</p>
+                <div>
+                    <table>
+                        <tr>
+                            <th>P</th>
+                            <th>Q</th>
+                            <th>OR</th>
+                        </tr>
+                        <tr><td>V</td><td>V</td><td>V</td></tr>
+                        <tr><td>V</td><td>F</td><td>V</td></tr>
+                        <tr><td>F</td><td>V</td><td>V</td></tr>
+                        <tr><td>F</td><td>F</td><td>F</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- COMPUERTA NOT -->
+            <div class="contcompuerta">
+                <h2 class="compuerta">NOT</h2>
+                <img src="https://hetpro-store.com/TUTORIALES/wp-content/uploads/2017/10/compuerta-not-3.png"
+                    alt="compuerta NOT" class="compuerta">
+                <p>invierte la salida: si es 1 pasa a 0 y si es 0 pasa a uno</p>
+                <div>
+                    <table>
+                        <tr>
+                            <th>P</th>
+                            <th>NOT</th>
+                        </tr>
+                        <tr><td>V</td><td>F</td></tr>
+                        <tr><td>F</td><td>V</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- COMPUERTA NAND -->
+            <div class="contcompuerta">
+                <h2 class="compuerta">NAND</h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNC6UoPE9NS1K4_7AFJihQwGtVfEqz9RSRcA&s"
+                    alt="compuerta NAND" class="compuerta">
+                <p>Da 0 cuando ambas son 1</p>
+                <div>
+                    <table>
+                        <tr>
+                            <th>P</th>
+                            <th>Q</th>
+                            <th>NAND</th>
+                        </tr>
+                        <tr><td>V</td><td>V</td><td>F</td></tr>
+                        <tr><td>V</td><td>F</td><td>V</td></tr>
+                        <tr><td>F</td><td>V</td><td>V</td></tr>
+                        <tr><td>F</td><td>F</td><td>V</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- COMPUERTA NOR -->
+            <div class="contcompuerta">
+                <h2 class="compuerta">NOR</h2>
+                <img src="https://hetpro-store.com/TUTORIALES/wp-content/uploads/2017/10/compuerta-nor-5.png"
+                    alt="compuerta NOR" class="compuerta">
+                <p>Da 1 si ambas son 0</p>
+                <div>
+                    <table>
+                        <tr>
+                            <th>P</th>
+                            <th>Q</th>
+                            <th>NOR</th>
+                        </tr>
+                        <tr><td>V</td><td>V</td><td>F</td></tr>
+                        <tr><td>V</td><td>F</td><td>F</td></tr>
+                        <tr><td>F</td><td>V</td><td>F</td></tr>
+                        <tr><td>F</td><td>F</td><td>V</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- COMPUERTA XOR -->
+            <div class="contcompuerta">
+                <h2 class="compuerta">XOR</h2>
+                <img src="https://hetpro-store.com/TUTORIALES/wp-content/uploads/2017/10/compuerta-xor-6.png"
+                    alt="compuerta XOR" class="compuerta">
+                <p>Da 1 si ambas son diferentes</p>
+                <div>
+                    <table>
+                        <tr>
+                            <th>P</th>
+                            <th>Q</th>
+                            <th>XOR</th>
+                        </tr>
+                        <tr><td>V</td><td>V</td><td>F</td></tr>
+                        <tr><td>V</td><td>F</td><td>V</td></tr>
+                        <tr><td>F</td><td>V</td><td>V</td></tr>
+                        <tr><td>F</td><td>F</td><td>F</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- COMPUERTA XNOR -->
+            <div class="contcompuerta">
+                <h2 class="compuerta">XNOR</h2>
+                <img src="https://hetpro-store.com/TUTORIALES/wp-content/uploads/2017/10/compuerta-xnor-7.png" alt="compuerta XNOR" class="compuerta">
+                <p>Da 1 si ambas son iguales</p>
+                <div>
+                    <table>
+                        <tr>
+                            <th>P</th>
+                            <th>Q</th>
+                            <th>XNOR</th>
+                        </tr>
+                        <tr><td>V</td><td>V</td><td>V</td></tr>
+                        <tr><td>V</td><td>F</td><td>F</td></tr>
+                        <tr><td>F</td><td>V</td><td>F</td></tr>
+                        <tr><td>F</td><td>F</td><td>V</td></tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Delfina Brugna 5toB</p>
+        <a href="index.html">Volver al inicio</a>
+    </footer>
+</body>
+
+</html>

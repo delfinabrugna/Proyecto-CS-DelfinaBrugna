@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamiento Computacional</title>
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+
+    <nav id="barritadearriba">
+        <ul id="listanav">
+            <li class="nav_list_item"><a href="index.html">Inicio</a></li>
+            <li class="nav_list_item"><a href="compuertas.html">Compuertas logicas</a></li>
+            <li class="nav_list_item" id="botoncito_de_arriba_login"><a href="login.html">Log In</a></li>
+            <li class="nav_list_item"><a href="rolso.html">Rol del SO</a></li>
+            <li class="nav_list_item"><a href="funcionesdelso.html">Funciones del SO</a></li>
+            <li class="nav_list_item"><a href="sistemasoperativos.html">Sistemas Operativos</a></li>
+            <li class="nav_list_item"><a class="pagina_activa" href="computational.html">Pensamiento Computacional</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Pensamiento Computacional</h1>
+    </header>
+
+    <main>
+
+        <!-- SECCIÓN: Qué es y para qué sirve -->
+        <section>
+            <h2>¿Qué es el pensamiento computacional?</h2>
+            <p>El pensamiento computacional es una base para el pensamiento de problemas o preguntas en diferentes rubros. Es una forma de pensar y examinar problemas en los que sus soluciones pueden ser representados computacionalmente. El pensamiento computacional ayuda a analizar como sistemas con varios componentes trabajan juntos.</p>
+            <img src="https://lamenteesmaravillosa.com/wp-content/uploads/2020/12/cerebro-codigos.png" alt="Computational thinking" class="imagen-seccion">
+        </section>
+
+        <section>
+            <h2>¿Por qué es útil para resolver problemas?</h2>
+            <p>El pensamiento computacional es útil a la hora de resolver problemas de forma lógica y ordenada, diseñar sistemas digitales o físicos, programar software y aplicaciones y analizar cómo funcionan sistemas complejos con múltiples partes.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtES89a00rNRsAOvGvMrVLx4f4S6WlQ4orjA&s" alt="Computational thinking" class="imagen-seccion">
+        </section>
+
+        <!-- SECCIÓN: Especificación del problema -->
+        <section id="especificacion">
+            <h1>Especificación de un problema</h1>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-title">Enunciado</div>
+                    <p>Define el problema de forma específica, medible y sin ambigüedad. Debe enfocarse en el "qué" y el "por qué" del problema.</p>
+                    <ul>
+                        <li>Malo: "Nuestros procesos de atención al cliente son ineficientes" (demasiado vago)</li>
+                        <li>Bueno: "Los clientes esperan un promedio de 25 minutos en espera, lo que generó un 15% más de llamadas abandonadas en el último trimestre"</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Restricciones y limitaciones</div>
+                    <p>Son los límites que afectan la solución, como presupuesto, tiempo, hardware o regulaciones externas.</p>
+                    <ul>
+                        <li>Malo: "No tenemos muchos recursos" (vago)</li>
+                        <li>Bueno: "El presupuesto del proyecto está limitado a $10,000 y no puede superarse"</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Objetivos y metas</div>
+                    <p>Define los resultados deseados en dos niveles:</p>
+                    <ul>
+                        <li>Objetivos de alto nivel: resultados amplios y direccionales, por ejemplo "mejorar la experiencia del cliente"</li>
+                        <li>Metas específicas: targets medibles y con tiempo límite, por ejemplo "reducir el tiempo de espera en un 20% en el próximo trimestre"</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Especificación de entrada</div>
+                    <p>Describe el formato, tipo y características de los datos que entran al sistema. Por ejemplo, en un chatbot las entradas serían texto escrito o voz, idealmente claro y sin ambigüedad.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Especificación de salida</div>
+                    <p>Define el formato y contenido de los resultados que produce la solución. Por ejemplo, en un sistema de feedback, las salidas serían dashboards con gráficos, reportes detallados y alertas de feedback negativo.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Criterios de evaluación</div>
+                    <ul>
+                        <li>Efectividad: ¿resuelve el problema?</li>
+                        <li>Eficiencia: ¿ahorra tiempo y recursos?</li>
+                        <li>Usabilidad: ¿es fácil de usar?</li>
+                        <li>Mantenibilidad: ¿puede adaptarse a cambios futuros?</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Los 4 pilares -->
+        <section id="pilares">
+            <h1>Los 4 Pilares</h1>
+
+            <div class="cards"> 
+
+                <div class="card">
+                    <div class="card-title">Descomposición</div>
+                    <p>Consiste en romper un problema complejo, grande o confuso en partes mucho más pequeñas, sencillas y fáciles de entender de forma individual.</p>
+                    <ul>
+                        <li>¿Cuál es el problema principal? → Identificar el objetivo general.</li>
+                        <li>¿Cuáles son los subproblemas lógicos? → Separar en tareas independientes.</li>
+                        <li>¿Puedo encargarme de esta parte sin pensar en las demás? → Asegurar independencia.</li>
+                        <li>¿Hay partes repetidas o ya resueltas? → Identificar subtareas conocidas.</li>
+                    </ul>
+                    <p class="tip">Truco: dibujá cajitas con las sub-tareas. Si una cajita se ve difícil, descomponela en cajas más chicas.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Reconocimiento de patrones</div>
+                    <p>Encontrar repeticiones o regularidades en un problema. Si algo se repite, podés usarlo a tu favor.</p>
+                    <ul>
+                        <li>Observá los datos o el problema</li>
+                        <li>Identificá qué se repite (forma, diferencia, estructura)</li>
+                        <li>Creá una regla general que aplique a todos los casos similares</li>
+                    </ul>
+                    <p class="tip">Ejemplo: cada imagen es una cuadrícula de píxeles. Si tiene lazo u oval → probablemente es 0, 6, 8 o 9.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Abstracción</div>
+                    <p>Quedarte solo con lo que importa. Ignorar todo lo que no afecta la solución.</p>
+                    <ul>
+                        <li>¿Cuál es el propósito central? → Definí qué necesitás resolver</li>
+                        <li>¿Cuáles son las entradas y salidas? → Lo mínimo para que funcione</li>
+                        <li>¿Qué pasa si elimino este componente? → Si se rompe, era esencial</li>
+                        <li>¿Puedo simplificar cómo interactúan las partes? → Menos complejidad = mejor modelo</li>
+                    </ul>
+                    <p class="tip">Ejemplo: para predecir un partido no necesitás el color del uniforme. Sí necesitás rendimiento reciente y estadísticas clave.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Diseño algorítmico</div>
+                    <p>Crear instrucciones paso a paso, claras y sin ambigüedad, para resolver un problema. Un algoritmo es como una receta: si la seguís exactamente, siempre obtenés el mismo resultado.</p>
+                    <ul>
+                        <li>¿Cuál es exactamente el problema? → El objetivo del algoritmo</li>
+                        <li>¿Cuáles son las entradas? → Qué datos necesita recibir</li>
+                        <li>¿Cuáles son las salidas? → Qué debe producir y en qué formato</li>
+                        <li>¿Hay puntos de decisión? → Momentos donde toma un camino u otro</li>
+                        <li>¿Hay bucles? → Pasos que se repiten hasta que algo cambia</li>
+                    </ul>
+                    <p class="tip">Truco: explicale tu solución paso a paso a alguien que no conoce el problema. Si no puede seguirla, tu algoritmo tiene pasos faltantes.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Delfina Brugna 5toB</p>
+        <a href="index.html">Volver al inicio</a>
+    </footer>
+    
+</body>
+</html>
