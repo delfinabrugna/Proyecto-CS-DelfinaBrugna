@@ -1,0 +1,412 @@
+/* VARIABLES DE COLOR */
+:root {
+    --color-fondo: #ffffff;        /* fondo general de la página */
+    --color-texto: #222222;        /* color del texto */
+    --color-oscuro: #2c3e50;       /* color oscuro (nav y footer) */
+    --color-oscuro-hover: #34495e; /* color oscuro al pasar el mouse */
+    --color-acento: #bc1a60;       /* color principal de detalles (verde-azulado) */
+    --color-acento-hover: #a01642; /* color de acento al pasar el mouse */
+    --color-borde: #dddddd;        /* color de bordes */
+    --color-borde-tabla: #cccccc;  /* color de bordes de tablas */
+    --color-fondo-claro: #f0f0f0;  /* fondo gris clarito (encabezados de tabla) */
+    --color-fondo-def: #f7f7f7;    /* fondo de las cajas de definición */
+    --color-texto-claro: #555555;  /* texto gris para detalles */
+    --color-blanco: #ffffff;       /* blanco, para texto sobre fondo oscuro */
+}
+/* General */
+/*   RESET BÁSICO : Saca los márgenes y paddings que el navegador pone por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* hace que el padding no agrande el tamaño total de los elementos */
+}
+
+body {
+    font-family: Arial, sans-serif; /* tipografía */
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.5; /* espacio entre líneas */
+}
+
+/* BARRA DE NAVEGACIÓN (NAV) */
+#barritadearriba {
+    background-color: var(--color-oscuro);
+    padding: 10px 20px;
+    position: sticky; /* hace que se pegue arriba al hacer scroll */
+    top: 0;            /* "pegada" justo en el borde superior */
+    z-index: 100;      /* para que quede por encima del resto del contenido */
+}
+
+#listanav {
+    list-style: none; /* saca los puntitos de la lista */
+    display: flex; /* pone los items uno al lado del otro */
+    flex-wrap: wrap; /* si no entran, pasan a la siguiente línea */
+    gap: 10px; /* espacio entre cada link */
+}
+
+.nav_list_item a {
+    color: var(--color-blanco);
+    text-decoration: none; /* saca el subrayado del link */
+    padding: 8px 12px;
+    border-radius: 4px; /* bordes redondeados */
+}
+
+.nav_list_item a:hover {
+    background-color: var(--color-oscuro-hover); /* cambia de color al pasar el mouse */
+}
+
+/* Marca la página en la que estás parado */
+.pagina_activa {
+    background-color: var(--color-acento);
+    font-weight: bold;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+#logo_ib {
+    width: 120px; /* tamaño fijo del logo */
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    padding: 20px;
+    max-width: 1000px; /* el contenido no se estira de más en pantallas grandes */
+    margin: 0 auto; /* centra el contenido */
+}
+
+main h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main h2 {
+    margin: 20px 0 10px;
+    border-bottom: 2px solid var(--color-acento); /* línea debajo de cada título de sección */
+    padding-bottom: 5px;
+}
+
+main h3 {
+    margin: 15px 0 10px;
+}
+#contenidos_en_links {
+    margin: 20px 0;
+    text-align: center;
+    background-color: var(--color-fondo-claro);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#listado_de_links {
+    list-style: none; /* saca los puntitos de la lista */
+    padding-left: 0;  /* saca el padding izquierdo que viene por defecto */
+    display: flex; /* pone los items uno al lado del otro */
+    flex-wrap: wrap; /* si no entran, pasan a la siguiente línea */
+    gap: 10px; /* espacio entre cada link */
+
+}
+#listado_de_links li {
+    margin-block: 5px; /* espacio arriba y abajo de cada item de la lista */
+}
+.index_list_item {
+    color: var(--color-oscuro);
+    text-decoration: none; /* saca el subrayado del link */
+    padding: 8px 12px;
+    border-radius: 4px; /* bordes redondeados */
+    border: 1px solid var(--color-borde); /* borde alrededor de cada link */
+}
+.index_list_item:hover {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+}
+
+
+/* PÁGINA: COMPUERTAS LÓGICAS */
+#contenedor {
+    display: flex;
+    flex-wrap: wrap; /* las tarjetas pasan a la siguiente fila si no entran */
+    gap: 20px;
+    justify-content: center;
+}
+
+.contcompuerta {
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.contcompuerta img.compuerta {
+    width: 100px; /* tamaño de la imagen de la compuerta */
+    margin: 10px 0;
+}
+
+.contcompuerta table {
+    width: 100%;
+    border-collapse: collapse; /* une los bordes de la tabla */
+    margin-top: 10px;
+}
+
+.contcompuerta th,
+.contcompuerta td {
+    border: 1px solid var(--color-borde-tabla);
+    padding: 6px;
+    text-align: center;
+}
+
+.contcompuerta th {
+    background-color: var(--color-fondo-claro);
+}
+
+/* PÁGINA: LOG IN */
+.contenedor {
+    max-width: 300px;
+    margin: 40px auto; /* centra el formulario */
+    padding: 20px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+}
+
+.contenedor label {
+    display: block; /* cada label en su propia línea */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contenedor input[type="text"],
+.contenedor input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-borde-tabla);
+    border-radius: 4px;
+}
+
+#login_submit {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer; /* el cursor cambia a "mano" al pasar por arriba */
+}
+
+#login_submit:hover {
+    background-color: var(--color-acento-hover);
+}
+
+/* PÁGINA: ROL DEL SO */
+#diagrama-sistema-operativo {
+    display: block;
+    max-width: 100%; /* la imagen no se sale de la pantalla */
+    margin: 20px auto;
+}
+
+.grid-recursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* tarjetas que se acomodan solas según el ancho */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card-recurso {
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.card-recurso img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover; /* recorta la imagen para que entre prolija */
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* PÁGINA: FUNCIONES DEL SO */
+
+/* Caja de definición destacada */
+.def {
+    background-color: var(--color-fondo-def);
+    border-left: 4px solid var(--color-acento); /* línea de color al costado */
+    padding: 15px;
+    margin: 15px 0;
+}
+
+/* Tarjetas de información */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.card {
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--color-acento);
+}
+
+/* Estados de un proceso */
+.states {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.state {
+    border: 1px solid var(--color-borde-tabla);
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.state span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.state em {
+    font-size: 0.9em;
+    color: var(--color-texto-claro);
+}
+
+/* Tabla de sistemas de archivos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+table th,
+table td {
+    border: 1px solid var(--color-borde-tabla);
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--color-fondo-claro);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    margin-top: 30px;
+}
+
+footer a {
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*  PÁGINA: SISTEMAS OPERATIVOS  */
+
+/* Tarjetas de comparación Server vs Workstation */
+#SO-0 {
+    display: flex;
+    flex-wrap: wrap; /* si no entran en una fila, pasan a la siguiente */
+    gap: 20px;
+}
+
+.comparacion-card {
+    flex: 1;
+    min-width: 280px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Tarjetas de cada sistema operativo (Windows, macOS, Linux) */
+.sistema-card {
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Tarjeta de Ubuntu, dentro de la tarjeta de Linux */
+.subsistema-card {
+    border: 1px solid var(--color-borde-tabla);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    
+}
+
+/* Párrafos de definición y descripción */
+.definition,
+.description {
+    margin-bottom: 10px;
+}
+
+/* Listas de características, ejemplos, tipos y comandos */
+.characteristics,
+.examples,
+.types,
+.common-commands {
+    margin: 10px 0 10px 20px; /* margen a la izquierda para que se vea la lista con sangría */
+}
+
+.characteristics .item,
+.examples .item,
+.types .item,
+.common-commands .item {
+    margin-bottom: 5px;
+}
+
+/* Comandos: los mostramos como si fueran código */
+.common-commands .item {
+    font-family: monospace;
+    background-color: var(--color-fondo-claro);
+    padding: 4px 8px;
+    border-radius: 4px;
+    list-style: none; /* le sacamos el puntito porque ya tiene fondo */
+}
+
+/* PÁGINA: PENSAMIENTO COMPUTACIONAL */
+
+/* Texto de tip al pie de cada tarjeta */
+.tip {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--color-texto-claro);
+    border-left: 3px solid var(--color-acento);
+    padding-left: 8px;
+}
+
+/* Listas dentro de las tarjetas de pensamiento computacional */
+
+#especificacion ul li,
+#pilares ul li {
+    margin-bottom: 6px;
+    padding-left: 5px;
+    border-left: 2px dotted var(--color-acento); /* línea de color al costado de cada item */
+    list-style: none; /* saca el puntito, lo reemplaza la línea de color */
+}
